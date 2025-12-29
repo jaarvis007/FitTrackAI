@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: activityservice
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/aiactivityfitness}
+      database: ${MONGODB_DATABASE:aiactivityfitness}
+
+server:
+  port: ${SERVER_PORT:8082}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761/eureka/}
