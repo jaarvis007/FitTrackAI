@@ -65,6 +65,10 @@ application-prod.yml
 *.p12
 *.jks
 
+# Application configuration files (use .example versions instead)
+**/application.yml
+**/application.properties
+
 # Logs
 logs/
 *.log
