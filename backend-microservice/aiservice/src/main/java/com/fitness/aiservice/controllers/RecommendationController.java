@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/api/recommendation")
 public class RecommendationController {
 
-    final private RecommendationService recommendationService;
+    private final RecommendationService recommendationService;
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<Recommendation>> getUserRecommendation(@PathVariable String userId ){
@@ -25,7 +25,7 @@ public class RecommendationController {
     }
 
     @GetMapping("/activity/{activityId}")
-    public ResponseEntity<Recommendation> getActivityRecommendation(@PathVariable String activityId ){
+    public ResponseEntity<Recommendation> getActivityRecommendation(@PathVariable String activityId) {
         return ResponseEntity.ok(recommendationService.getActivityRecommendation(activityId));
     }
 
